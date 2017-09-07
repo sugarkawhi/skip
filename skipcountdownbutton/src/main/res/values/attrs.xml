@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SkipCountDownButton">
+        <attr name="backgroundColor" format="color" />
+        <attr name="edgeColor" format="color" />
+        <attr name="text" format="string" />
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="millisecond" format="integer" />
+        <attr name="edgeWidth" format="dimension" />
+    </declare-styleable>
+
+</resources>
