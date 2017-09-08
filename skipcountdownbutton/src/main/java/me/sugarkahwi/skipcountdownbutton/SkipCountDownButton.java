@@ -12,6 +12,7 @@ import android.graphics.PathMeasure;
 import android.os.Build;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 
@@ -214,6 +215,7 @@ public class SkipCountDownButton extends View {
             //截取
             mEdgePathMeasure.setPath(mEdgePath, false);
             float animValue = (float) mValueAnimator.getAnimatedValue();
+            Log.e("TAG", "doDrawEdge: " + mValueAnimator.isRunning() + " >> " + animValue);
             if (animValue != 0f) {
                 float length = mEdgePathMeasure.getLength();
                 mEdgePathMeasure.getSegment(length - (animValue * length),
@@ -221,11 +223,8 @@ public class SkipCountDownButton extends View {
                         mSubEdgePath,
                         true);
                 canvas.drawPath(mSubEdgePath, mEdgePaint);
-            } else {
-                canvas.drawPath(mEdgePath, mEdgePaint);
             }
         }
-
     }
 
     private Paint.FontMetrics metrics;
