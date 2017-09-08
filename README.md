@@ -16,5 +16,5 @@ Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
 ### 使用
 
 ```
-compile 'me.sugarkawhi:skipcountdownbutton:1.0.1'
+compile 'me.sugarkawhi:skipcountdownbutton:1.0.3'
 ```

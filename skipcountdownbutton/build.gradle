@@ -40,7 +40,7 @@ publish {
     userOrg = 'zhaozy'//bintray.comOrg name
     groupId = 'me.sugarkawhi'//jcenter上的路径
     artifactId = 'skipcountdownbutton'//项目名称
-    publishVersion = '1.0.2'//版本号
+    publishVersion = '1.0.3'//版本号
     desc = 'skipcountdownbutton'//描述，不重要
     website = 'https://github.com/suagrkawhi/skipcountdownbutton'//网站，不重要；尽量模拟github上的地址
 }

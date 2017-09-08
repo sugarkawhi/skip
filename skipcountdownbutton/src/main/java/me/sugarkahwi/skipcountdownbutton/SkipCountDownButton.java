@@ -22,6 +22,8 @@ import android.view.View;
 
 public class SkipCountDownButton extends View {
 
+    private static final String TAG = "SkipCountDownButton";
+
     private Paint mBackgroundPaint;
     private Paint mEdgePaint;
     private Paint mTextPaint;
@@ -143,6 +145,7 @@ public class SkipCountDownButton extends View {
 
             @Override
             public void onAnimationEnd(Animator animator) {
+                //mValueAnimator.cancel()方法也会回调此方法
                 if (onSkipCountDownListener != null)
                     onSkipCountDownListener.onSkip();
             }
@@ -181,7 +184,7 @@ public class SkipCountDownButton extends View {
             setMeasuredDimension(widthSize, widthSize);
         }
 
-        radius = widthSize / 2 - edgeWith ;
+        radius = widthSize / 2 - edgeWith;
     }
 
     @Override
@@ -246,8 +249,6 @@ public class SkipCountDownButton extends View {
 
     public void skip() {
         mValueAnimator.cancel();
-        if (onSkipCountDownListener != null)
-            onSkipCountDownListener.onSkip();
     }
 
     public interface OnSkipCountDownListener {
